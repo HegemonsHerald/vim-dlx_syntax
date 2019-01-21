@@ -4,9 +4,9 @@
 " Note: Order of definition matters, see :h :syn-priority
 syntax match dlxLabel	 '\w\+:\='
 syntax match dlxComment  '/.*$'
-syntax match dlxRegister '\<[rR][0-9]*\>'
+syntax match dlxRegister '\<[rR][0-9]\+\>'
 syntax match dlxLiteral  '#[0-9]*'
-syntax match dlxDisplace '[0-9]\{1,4}([rR][0-9]\{1,2})'
+syntax match dlxDisplace '[0-9]\+([rR][0-9]\+})'
 
 " Syntax groups for Opcodes
 syntax case ignore
@@ -41,7 +41,7 @@ syntax case match
 " highlight dlxRegister	ctermfg=208 guifg=#fd971f
 " highlight link dlxLabel Identifier
 
-" Highlighting with colors that come closest to Hűser's Dark Theme
+" Highlighting with colors that come closest to Hűser's and Codemirror's Dark Theme
 highlight link dlxComment	Comment
 highlight dlxLabel	ctermfg=39
 highlight dlxOpcode	ctermfg=197
