@@ -9,41 +9,27 @@ syntax match dlxLabel	 '\<[a-zA-Z]\+\>:\='
 
 " Syntax groups for Opcodes
 syntax case ignore
-syntax match dlxOpcode 'ADD'
-syntax match dlxOpcode 'ADDI'
-syntax keyword dlxOpcode 'ANDI'
-syntax keyword dlxOpcode 'AND'
-syntax keyword dlxOpcode 'ORI'
-syntax keyword dlxOpcode 'OR'
-syntax keyword dlxOpcode 'SEQI'
-syntax keyword dlxOpcode 'SEQ'
-syntax keyword dlxOpcode 'SLEI'
-syntax keyword dlxOpcode 'SLE'
-syntax keyword dlxOpcode 'SLLI'
-syntax keyword dlxOpcode 'SLL'
-syntax keyword dlxOpcode 'SLTI'
-syntax keyword dlxOpcode 'SLT'
-syntax keyword dlxOpcode 'SNEI'
-syntax keyword dlxOpcode 'SNE'
-syntax keyword dlxOpcode 'SRAI'
-syntax keyword dlxOpcode 'SRA'
-syntax keyword dlxOpcode 'SRLI'
-syntax keyword dlxOpcode 'SRL'
-syntax keyword dlxOpcode 'SUBI'
-syntax keyword dlxOpcode 'SUB'
-syntax keyword dlxOpcode 'XORI'
-syntax keyword dlxOpcode 'XOR'
-syntax keyword dlxOpcode 'BEQZ'
-syntax keyword dlxOpcode 'BNEZ'
-syntax keyword dlxOpcode 'J'
-syntax keyword dlxOpcode 'JALR'
-syntax keyword dlxOpcode 'JAL'
-syntax keyword dlxOpcode 'JR'
-syntax keyword dlxOpcode 'LW'
-syntax keyword dlxOpcode 'SW'
-syntax keyword dlxOpcode 'HALT'
-syntax keyword dlxOpcode 'TRAP'
-syntax keyword dlxOpcode 'MULT'
+syntax keyword dlxOpcode OR[I]
+syntax keyword dlxOpcode ADD[I]
+syntax keyword dlxOpcode AND[I]
+syntax keyword dlxOpcode SEQ[I]
+syntax keyword dlxOpcode SLE[I]
+syntax keyword dlxOpcode SLL[I]
+syntax keyword dlxOpcode SLT[I]
+syntax keyword dlxOpcode SNE[I]
+syntax keyword dlxOpcode SRA[I]
+syntax keyword dlxOpcode SRL[I]
+syntax keyword dlxOpcode SUB[I]
+syntax keyword dlxOpcode XOR[I]
+syntax keyword dlxOpcode JAL[R]
+syntax keyword dlxOpcode J[R]
+syntax keyword dlxOpcode BEQZ
+syntax keyword dlxOpcode BNEZ
+syntax keyword dlxOpcode LW
+syntax keyword dlxOpcode SW
+syntax keyword dlxOpcode HALT
+syntax keyword dlxOpcode TRAP
+syntax keyword dlxOpcode MULT
 syntax case match
 
 " Linking groups to existing hi-groups
