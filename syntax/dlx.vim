@@ -1,11 +1,12 @@
 " Regexes for the various syntax elements
 
 " Syntax groups based on regex
+" Note: Order of definition matters, see :h :syn-priority
+syntax match dlxLabel	 '\w\+:\='
 syntax match dlxComment  '/.*$'
-syntax match dlxRegister '[rR][0-9]\{2}'
+syntax match dlxRegister '\<[rR][0-9]\{1,2}\>'
 syntax match dlxLiteral  '#[0-9]*'
-syntax match dlxDisplace '[0-9]\{1,4}([rR][0-9]\{2})'
-syntax match dlxLabel	 '\<[a-zA-Z]\+\>:\='
+syntax match dlxDisplace '[0-9]\{1,4}([rR][0-9]\{1,2})'
 
 " Syntax groups for Opcodes
 syntax case ignore
